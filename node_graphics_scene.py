@@ -16,17 +16,24 @@ class QDMGraphicsScene(QGraphicsScene):
     def __init__(self, parent=None):
         super().__init__(parent=parent)
         # settings
-        self.grid_size = 20
-        self.grid_square = 5
+        GRID_SIZE = 20
+        GRID_SQUARE = 5
+        MAJOR_WIDTH = 1.5
+        MINOR_WIDTH = 1
+        SCENE_HEIGHT = 64000
+        SCENE_WIDTH = 64000
 
-        self.major_width = 1.5
-        self.minor_width = 1
+        self.grid_size = GRID_SIZE
+        self.grid_square = GRID_SQUARE
 
-        self.scene_width, self.scene_height = 64000, 64000
-        self.setSceneRect(-self.scene_width//2, -self.scene_height//2, self.scene_width, self.scene_height)
-
+        self.major_width = MAJOR_WIDTH
+        self.minor_width = MINOR_WIDTH
+        
         self._pen_light.setWidth(self.minor_width)
         self._pen_dark.setWidth(self.major_width)
+
+        self.scene_width, self.scene_height = SCENE_WIDTH, SCENE_HEIGHT
+        self.setSceneRect(-self.scene_width//2, -self.scene_height//2, self.scene_width, self.scene_height)
 
         self.setBackgroundBrush(self._color_background)
 

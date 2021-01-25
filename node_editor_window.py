@@ -29,5 +29,6 @@ class NodeEditorWindow(QWidget):
         # add contents to layout
         self.layout.addWidget(self.view)
 
+        # show widget
         self.setWindowTitle("Node Editor")
         self.show()
