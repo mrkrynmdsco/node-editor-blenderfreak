@@ -7,8 +7,8 @@ from PySide6.QtCore import (QLine)
 
 class QDMGraphicsScene(QGraphicsScene):
     _color_background = QColor("#393939")
-    _color_light = QColor("#2F2F2F")
-    _color_dark = QColor("#292929")
+    _color_light = QColor("#303030")
+    _color_dark = QColor("#212121")
 
     _pen_light = QPen(_color_light)
     _pen_dark = QPen(_color_dark)
@@ -17,7 +17,7 @@ class QDMGraphicsScene(QGraphicsScene):
         super().__init__(parent=parent)
         # settings
         GRID_SIZE = 20
-        GRID_SQUARE = 5
+        GRID_SQUARE = 4
         MAJOR_WIDTH = 1.5
         MINOR_WIDTH = 1
         SCENE_HEIGHT = 64000
